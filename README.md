@@ -1,1 +1,1 @@
-# proyectofinal
+npm ri# proyectofinal
