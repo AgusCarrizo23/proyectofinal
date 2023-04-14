@@ -1,6 +1,18 @@
 import React from "react";
-import { Container, Heading, Flex, Box } from '@chakra-ui/react'
+import { Container, Heading, Flex, Box, Button} from '@chakra-ui/react';
 import CardServiceComponent from "./CardService";
+import { 
+    faDesktop,
+    faInfoCircle,
+    faDisplay,
+    faPaintBrush,
+    faHouseLaptop,
+    faComputer
+  } from "@fortawesome/free-solid-svg-icons";
+
+
+
+
 
 
 function ServiceCards() {
@@ -13,15 +25,34 @@ function ServiceCards() {
             </Container>
             <Box display="flex" flexDirection="column" justifyContent="space-between" alignItems="center" >
                 <Box display="flex" flexDirection="row" justifyContent="space-between" width="70%" padding="10">
-                <CardServiceComponent/>
-                <CardServiceComponent/>
-                <CardServiceComponent/>
+                    <CardServiceComponent
+                        titulo="Web Design"
+                        icon={faDesktop} />
+                    <CardServiceComponent
+                        titulo="Analytical Abilities"
+                        icon={faInfoCircle}/>
+                    
+                    
+                    <CardServiceComponent
+                        titulo="Web Depelopement"
+                        icon={faDisplay} />
+                    
                 </Box>
                 <Box display="flex" flexDirection="row" justifyContent="space-between" width="70%" padding="10">
-                <CardServiceComponent/>
-                <CardServiceComponent/>
-                <CardServiceComponent/>
+                    <CardServiceComponent
+                        titulo="Graphic Design"
+                       icon={faPaintBrush}/>
+                    
+                    <CardServiceComponent
+                        titulo="aplication"
+                        icon={faHouseLaptop}/>
+                    
+                    <CardServiceComponent
+                        titulo="Problem Solving"
+                         icon={faComputer} />
+                    
                 </Box>
+                <Button colorScheme="#060606" bg="#ef4f10" size="lg" mr={4}>welcome</Button>
             </Box>
 
         </Flex>

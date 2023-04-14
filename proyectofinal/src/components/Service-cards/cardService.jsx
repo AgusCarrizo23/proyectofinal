@@ -1,10 +1,12 @@
 import React from "react";
 import { Flex, Box, Text } from '@chakra-ui/react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function CardServiceComponent() {
+
+function CardServiceComponent(props) {
+    
 
     return (
         <Flex
@@ -25,9 +27,9 @@ function CardServiceComponent() {
                 height="10"
                 borderRadius="100"
                 >
-            <FontAwesomeIcon color="#ef4f10" icon={faHome} />
+            <FontAwesomeIcon color="#ef4f10" icon={props.icon} />
             </Box>
-            <Text fontSize="xl">title</Text>
+            <Text fontSize="sm">{props.titulo}</Text>
             <ArrowForwardIcon color="#ef4f10" boxSize={6}></ArrowForwardIcon>
         </Flex>
     );
