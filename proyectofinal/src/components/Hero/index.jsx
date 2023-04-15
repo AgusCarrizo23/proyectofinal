@@ -1,59 +1,36 @@
 import React from "react";
-import { ChakraProvider, Box, Flex, Button, Heading, Text, Image } from '@chakra-ui/react'
+import { Box, Flex, Button, Heading, Text, Image } from '@chakra-ui/react'
+import bgHero from '../../assets/images/bg-agus-svg.svg'
+import agusHero from '../../assets/images/agus-hero.png'
 
 
 function Hero() {
 
   return (
     <div>
-      <h1>test titleeeeeeee</h1>
-      <Flex align="center" justify="space-between" py={16}>
+      <Flex bgColor="#060606" align="center" justify="space-between" justifyContent="center" py={16}>
+        
+        <Image src={bgHero} position="absolute" width="100%" bgColor="#060606"/>
+
+        <Box display="flex" flexDirection="row" alignItems="center" justifyContent="space-between" width="80%" position="relative">
         {/* Sección izquierda */}
-        <Box maxW="xl" mr={16}>
-          <Button colorScheme="blue" size="lg" mr={4}>welcome</Button>
-          <Heading as="h1" size="3xl">agustinaaaaaa</Heading>
-          <Text fontSize="lg" mb={8}>
-            de valor de tu producto o serviser más largo o más corto, según tus necesidades
-          </Text>
+        <Box color="white" maxW="xl" mr={16}>
+          <Button bgColor="#ef4f10" size="lg" mr={4}>welcome</Button>
+          <Heading as="h1" size="3xl">Agustina Carrizo</Heading>
+          <Text fontSize="lg" mb={8} mt={4}>Frontend Developer</Text>
           <Text fontSize="lg" mb={8}>
             Texto de ejemplo que explica la propuesta de valor de tu producto o servicio. Puede ser más largo o más corto, según tus necesidades.
           </Text>
-          <Button colorScheme="blue" size="lg" mr={4}>Botón 1</Button>
-          <Button colorScheme="gray" size="lg">Botón 2</Button>
+          <Button bgColor="#ef4f10" size="lg" mr={4}>Botón 1</Button>
+          <Button bgColor="#060606" size="lg" border="1px solid #fff">Botón 2</Button>
         </Box>
         {/* Sección derecha */}
-        <Box maxW="sm">
-          <Image src="https://images.unsplash.com/photo-1628541453359-9b27fa5ba8fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGxvZ28lMjBkZXNpZ258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Mi imagen" borderRadius="md" boxShadow="xl" />
+        <Box maxW="sm" marginRight="10%">
+          <Image src={agusHero} alt="Mi imagen" boxShadow="xl" borderRadius="100%" bgColor="white"/>
+        </Box> 
         </Box>
       </Flex>
     </div>
- /*   <Flex className="Hero" pt='100px' h='800px'>
-
-      <Box flex w='60%' pt='170' pl='220'>
-        <Button bg="#4CAF50" color="white" size="md" borderRadius="sm" px={4}>welcome!</Button>
-        <Heading>yasin araf</Heading>
-        <Text fontSize={'sm'} color={'gray.500'}>  </Text>
-        <Text fontSize={'sm'} color={'gray.500'}> grafic y web</Text>
-        <Text fontSize={'sm'} color={'gray.500'}>  srgxgfjtjhggggggggggggggggggfhkfyilguoñihoñyilyi-hcyvk.vylifyvñfyiñcyilvlicvlc</Text>
-
-
-        <Flex pt='40px'>
-          <Box >
-            <Button bg="#4CAF50" color="white" size="md" borderRadius="sm" px={4}>Hire me</Button>
-          </Box>
-
-          <Box>
-            <Button bg="#4CAF50" color="white" size="md" borderRadius="sm" px={4}>explore</Button>
-          </Box>
-        </Flex>
-        <Box w='30%'>
-          <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGxvZ28lMjBkZXNpZ258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt='imsgen' style={{ width: 500 }} />
-        </Box>
-
-      </Box>
-
-    </Flex> */
-
   );
 
 }
